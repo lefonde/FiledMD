@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="14dp"
+        android:rowCount="3">
+
+        <!-- Row 1 -->
+        <!-- Column 1 -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline1"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+                <!-- Heart Rate 1 -->
+                <TextView
+                    android:id="@+id/hr1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="@string/hr"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                    app:layout_constraintStart_toStartOf="@+id/saturation1" />
+
+                <EditText
+                    android:id="@+id/hr1_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/saturation1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/saturation1" />
+
+                <!-- Saturation 1 -->
+                <TextView
+                    android:id="@+id/saturation1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/saturation"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="@+id/guideline1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="75dp" />
+
+                <EditText
+                    android:id="@+id/saturation1_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline1"
+                    app:layout_constraintEnd_toEndOf="@+id/hr1_result" />
+
+                <!-- BP 1 -->
+                <TextView
+                    android:id="@+id/blood_pressure1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/saturation1"
+                    app:layout_constraintTop_toBottomOf="@+id/saturation1" />
+
+                <EditText
+                    android:id="@+id/blood_pressure1_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/hr1_result"
+                    app:layout_constraintTop_toBottomOf="@+id/hr1_result" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 2 -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline2"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+                <!-- Heart Rate 2 -->
+                <TextView
+                    android:id="@+id/hr2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="@string/hr"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                    app:layout_constraintStart_toStartOf="@+id/saturation2" />
+
+                <EditText
+                    android:id="@+id/hr2_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/saturation2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/saturation2" />
+
+                <!-- Saturation 2 -->
+                <TextView
+                    android:id="@+id/saturation2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/saturation"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="@+id/guideline2"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="75dp" />
+
+                <EditText
+                    android:id="@+id/saturation2_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline2"
+                    app:layout_constraintEnd_toEndOf="@+id/hr2_result" />
+
+                <!-- BP 2 -->
+                <TextView
+                    android:id="@+id/blood_pressure2"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/saturation2"
+                    app:layout_constraintTop_toBottomOf="@+id/saturation2" />
+
+                <EditText
+                    android:id="@+id/blood_pressure2_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/hr2_result"
+                    app:layout_constraintTop_toBottomOf="@+id/hr2_result" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Row 2 -->
+        <!-- Column 1 -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline3"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+                <!-- Heart Rate 3 -->
+                <TextView
+                    android:id="@+id/hr3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="@string/hr"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                    app:layout_constraintStart_toStartOf="@+id/saturation3" />
+
+                <EditText
+                    android:id="@+id/hr3_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/saturation3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/saturation3" />
+
+                <!-- Saturation 3 -->
+                <TextView
+                    android:id="@+id/saturation3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/saturation"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="@+id/guideline3"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="75dp" />
+
+                <EditText
+                    android:id="@+id/saturation3_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                    app:layout_constraintEnd_toEndOf="@+id/hr3_result" />
+
+                <!-- BP 3 -->
+                <TextView
+                    android:id="@+id/blood_pressure3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/saturation3"
+                    app:layout_constraintTop_toBottomOf="@+id/saturation3" />
+
+                <EditText
+                    android:id="@+id/blood_pressure3_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/hr3_result"
+                    app:layout_constraintTop_toBottomOf="@+id/hr3_result" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 2 -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline4"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+                <!-- Heart Rate 4 -->
+                <TextView
+                    android:id="@+id/hr4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="@string/hr"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                    app:layout_constraintStart_toStartOf="@+id/saturation4" />
+
+                <EditText
+                    android:id="@+id/hr4_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/saturation4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/saturation4" />
+
+                <!-- Saturation 4 -->
+                <TextView
+                    android:id="@+id/saturation4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/saturation"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="@+id/guideline4"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="75dp" />
+
+                <EditText
+                    android:id="@+id/saturation4_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                    app:layout_constraintEnd_toEndOf="@+id/hr4_result" />
+
+                <!-- BP 4 -->
+                <TextView
+                    android:id="@+id/blood_pressure4"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/saturation4"
+                    app:layout_constraintTop_toBottomOf="@+id/saturation4" />
+
+                <EditText
+                    android:id="@+id/blood_pressure4_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/hr4_result"
+                    app:layout_constraintTop_toBottomOf="@+id/hr4_result" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Row 3 -->
+        <!-- Column 1 -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline5"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+                <!-- Heart Rate 5 -->
+                <TextView
+                    android:id="@+id/hr5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="@string/hr"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                    app:layout_constraintStart_toStartOf="@+id/saturation5" />
+
+                <EditText
+                    android:id="@+id/hr5_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/saturation5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/saturation5" />
+
+                <!-- Saturation 5 -->
+                <TextView
+                    android:id="@+id/saturation5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/saturation"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="@+id/guideline5"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="75dp" />
+
+                <EditText
+                    android:id="@+id/saturation5_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                    app:layout_constraintEnd_toEndOf="@+id/hr5_result" />
+
+                <!-- BP 5 -->
+                <TextView
+                    android:id="@+id/blood_pressure5"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/saturation5"
+                    app:layout_constraintTop_toBottomOf="@+id/saturation5" />
+
+                <EditText
+                    android:id="@+id/blood_pressure5_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/hr5_result"
+                    app:layout_constraintTop_toBottomOf="@+id/hr5_result" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- Column 2 -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <android.support.constraint.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/guideline6"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5"/>
+
+                <!-- Heart Rate 6 -->
+                <TextView
+                    android:id="@+id/hr6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="@string/hr"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                    app:layout_constraintStart_toStartOf="@+id/saturation6" />
+
+                <EditText
+                    android:id="@+id/hr6_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toBottomOf="@+id/saturation6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/saturation6" />
+
+                <!-- Saturation 6 -->
+                <TextView
+                    android:id="@+id/saturation6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/saturation"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="@+id/guideline6"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="75dp" />
+
+                <EditText
+                    android:id="@+id/saturation6_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                    app:layout_constraintEnd_toEndOf="@+id/hr6_result" />
+
+                <!-- BP 6 -->
+                <TextView
+                    android:id="@+id/blood_pressure6"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:text="@string/blood_pressure"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/saturation6"
+                    app:layout_constraintTop_toBottomOf="@+id/saturation6" />
+
+                <EditText
+                    android:id="@+id/blood_pressure6_result"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    app:layout_constraintEnd_toEndOf="@+id/hr6_result"
+                    app:layout_constraintTop_toBottomOf="@+id/hr6_result" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </GridLayout>
+
+</LinearLayout>
